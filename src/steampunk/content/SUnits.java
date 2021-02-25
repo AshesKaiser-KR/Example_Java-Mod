@@ -1,10 +1,10 @@
 package steampunk.content;
 
+import mindustry.annotations.Annotations;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
 import mindustry.ctype.ContentList;
 import mindustry.entities.bullet.BombBulletType;
-import mindustry.annotations;
 import mindustry.gen.Sounds;
 import mindustry.gen.UnitEntity;
 import mindustry.gen.Unitc;
@@ -16,7 +16,7 @@ import static mindustry.Vars.*;
 
 public class SUnits implements ContentList {
     //plane
-    public static @EntityDef({Unitc.class}) UnitType bomber;
+    public static @Annotations.EntityDef({Unitc.class}) UnitType bomber;
     //endregion
 
     @Override
