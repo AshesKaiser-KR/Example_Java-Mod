@@ -1,11 +1,11 @@
 {
-  "name": "modtemplate",
-  "displayName": "Template",
-  "author": "[#8738ff[]]Sonnicon[[]]",
-  "description": "Gradle jar Mindustry mod template",
-  "version": "0",
-  "main": "sonnicon.modtemplate.ModTemplate",
-  "minGameVersion": "105",
+  "name": "steampunk",
+  "displayName": "Steampunk-Rust, War, Steel",
+  "author": "[#royal[]]Team eukkbi[[]]",
+  "description": "steampunk",
+  "version": "1",
+  "main": "steampunk.core.Main",
+  "minGameVersion": "124",
   "dependencies": [],
   "hidden": false,
   "java": true
