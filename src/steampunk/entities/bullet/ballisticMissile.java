@@ -24,15 +24,14 @@ public class ballisticMissile extends BasicBulletType{
         bulletx = b.x;
         bullety = b.y;
         timer += 1f;
-        s = speed * timer;
         bulletRange = speed * lifetime * (1f - drag);
-        if (s <= bulletRange * 0.5){
+        if (timer <= 120f){
             b.vel().scl(0.98f * Time.delta);
         }else{
-            b.vel().scl(1.05f * Time.delta);
+            b.vel().scl(1.035f * Time.delta);
         }
 
-        if (timer >= 240f){
+        if (timer >= 360f){
             timer = 0;
         }
     }
