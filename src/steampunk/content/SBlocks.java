@@ -1,5 +1,6 @@
 package steampunk.content;
 
+import arc.struct.Seq;
 import mindustry.content.Bullets;
 import mindustry.content.Fx;
 import mindustry.content.Items;
@@ -10,6 +11,7 @@ import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.distribution.StackConveyor;
 import mindustry.world.blocks.environment.Floor;
+import mindustry.world.blocks.units.UnitFactory;
 import steampunk.content.SBullets.*;
 import arc.graphics.Color;
 
@@ -68,6 +70,15 @@ public class SBlocks implements ContentList {
 
             acceptCoolant = false;
 
+        }};
+
+        airBase = new UnitFactory ("airBase"){{
+            requirements(Category.units, with(Items.copper, 150, Items.lead, 80, Items.silicon, 100));
+            plans = Seq.with(
+                    new UnitPlan(SUnits.bomber, 60f * 15, with(Items.silicon, 15))
+            );
+            size = 3;
+            consumes.power(2f);
         }};
 
         //endregion
