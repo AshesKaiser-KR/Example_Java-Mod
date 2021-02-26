@@ -31,6 +31,10 @@ public class ballisticMissile extends BasicBulletType{
         }else{
             b.vel().scl(1.05f * Time.delta);
         }
+
+        if (timer >= 240f){
+            timer = 0;
+        }
     }
 
     @Override

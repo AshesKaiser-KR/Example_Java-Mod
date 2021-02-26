@@ -25,8 +25,8 @@ public class SUnits implements ContentList {
         bomber = new UnitType("bomber"){{
             constructor = UnitEntity::create;
             health = 500;
-            speed = 2f;
-            accel = 0.1f;
+            speed = 3.5f;
+            accel = 0.2f;
             drag = 0.02f;
             flying = true;
             hitSize = 10f;
@@ -36,14 +36,14 @@ public class SUnits implements ContentList {
             faceTarget = false;
             armor = 3.5f;
             targetFlag = BlockFlag.factory;
-            commandLimit = 5;
+            commandLimit = 6;
             circleTarget = true;
 
             weapons.add(new Weapon(){{
                 minShootVelocity = 0.9f;
                 x = 3.5f;
                 shootY = 0f;
-                reload = 11f;
+                reload = 30f;
                 shootCone = 180f;
                 ejectEffect = Fx.none;
                 inaccuracy = 10f;
@@ -52,8 +52,9 @@ public class SUnits implements ContentList {
                 bullet = new BombBulletType (40f, 35f){{
                     width = 8f;
                     height = 16f;
+                    sprite = "bomberBullet";
                     hitEffect = Fx.massiveExplosion;
-                    shootEffect = Fx.artilleryTrail;
+                    shootEffect = Fx.shootBig;
                     smokeEffect = Fx.rocketSmokeLarge;
 
                     status = StatusEffects.blasted;
