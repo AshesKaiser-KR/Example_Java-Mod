@@ -6,7 +6,7 @@
   "version": "1",
   "main": "steampunk.core.Main",
   "minGameVersion": "124",
-  "dependencies": [],
+  "dependencies": ["multi-lib"],
   "hidden": false,
   "java": true
 }
