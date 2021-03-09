@@ -19,9 +19,9 @@ repositories {
 }
 
 dependencies {
+    implementation  'com.github.younggam:multi-lib:java-v1.1.0'
     compileOnly "com.github.Anuken.Mindustry:core:$pMindustryVersion"
     compileOnly files('libs/annotations-122.jar')
-    compileOnly files('libs/multi-lib-java.jar')
 }
 
 jar {
