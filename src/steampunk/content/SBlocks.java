@@ -16,7 +16,9 @@ import static mindustry.type.ItemStack.with;
 public class SBlocks implements ContentList {
     public static Block
     //production
-    formwork, furnace, blastFurnace, shaftFurnace;
+    formwork, furnace, blastFurnace, shaftFurnace,
+    //environment
+    soil, stoneFloor, dirt;
 
 
     @Override
