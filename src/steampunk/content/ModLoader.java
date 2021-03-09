@@ -4,7 +4,7 @@ import mindustry.ctype.ContentList;
 
 public class ModLoader implements ContentList {
     private final ContentList[] contents = {
-            new SBullets(),
+            new SItems(),
             new SUnits(),
             new SBlocks()
     };
