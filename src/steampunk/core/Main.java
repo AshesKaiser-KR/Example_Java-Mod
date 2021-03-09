@@ -23,6 +23,6 @@ public class Main extends Mod{
 
     @Override
     public void loadContent(){
-        new ModLoader ().load();
+        new ModLoader().load();
     }
 }

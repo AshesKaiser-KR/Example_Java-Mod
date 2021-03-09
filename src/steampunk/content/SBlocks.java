@@ -44,8 +44,6 @@ public class SBlocks implements ContentList {
 
             );
 
-            craftEffect = Fx.burning;
-
         }};
 
     }
