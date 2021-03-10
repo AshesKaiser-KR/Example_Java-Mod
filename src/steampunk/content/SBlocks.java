@@ -15,7 +15,7 @@ import static mindustry.type.ItemStack.with;
 public class SBlocks implements ContentList {
     public static Block
     //production
-    formwork, furnace, blastFurnace, shaftFurnace,
+    bonfire, formwork, furnace, blastFurnace, shaftFurnace,
     //environment
     soil, stoneFloor, dirt;
 
@@ -37,7 +37,7 @@ public class SBlocks implements ContentList {
             status = StatusEffects.muddy;
             statusDuration = 120f;
             speedMultiplier = 0.74f;
-        }}
+        }};
 
         Blocks.stone = new Floor("stone"){{
             itemDrop = SItems.stone;
@@ -45,6 +45,21 @@ public class SBlocks implements ContentList {
         }};
 
         //region production
+
+        bonfire = new MultiCrafter("bonfire", 2){{
+            requirements(Category.crafting, with(SItems.wood, 20, SItems.stone, 10));
+            size = 2;
+            isSmelter = false;
+            addRecipe(
+                    new InputContents (with(SItems.wood, 2)),
+                    new OutputContents(with(Items.coal, 1)), 90f
+            );
+
+            addRecipe(
+                    new InputContents(with(SItems.dirt, 2)),
+                    new OutputContents(with(SItems.clay, 1)), 70f
+            );
+        }};
         formwork = new MultiCrafter("formwork", 3){{
             requirements(Category.crafting, with(SItems.wood, 20, SItems.stone, 20, SItems.clay, 10));
             size = 2;
