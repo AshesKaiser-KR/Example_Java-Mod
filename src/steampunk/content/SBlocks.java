@@ -31,6 +31,14 @@ public class SBlocks implements ContentList {
             speedMultiplier = 0.8f;
         }};
 
+        dirt = new Floor("dirt"){{
+            itemDrop = SItems.dirt;
+            playerUnmineable = false;
+            status = StatusEffects.muddy;
+            statusDuration = 120f;
+            speedMultiplier = 0.74f;
+        }}
+
         Blocks.stone = new Floor("stone"){{
             itemDrop = SItems.stone;
             playerUnmineable = false;
