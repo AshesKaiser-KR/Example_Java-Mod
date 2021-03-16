@@ -10,6 +10,7 @@ import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.GenericSmelter;
 import multilib.*;
 import multilib.Recipe.*;
+import steampunk.world.blocks.heatFactory;
 
 import static mindustry.type.ItemStack.with;
 
@@ -24,9 +25,10 @@ public class SBlocks implements ContentList {
     @Override
     public void load() {
         //region production
-        formwork = new MultiCrafter("formwork", 3){{
+        formwork = new heatFactory ("formwork", 3){{
             requirements(Category.crafting, with(SItems.wood, 20, SItems.stone, 20, SItems.clay, 10));
             size = 2;
+            heatCapacity = 200f;
             isSmelter = true;
             addRecipe(
                     new InputContents (with(SItems.tin, 1, Items.copper, 3)),
