@@ -33,6 +33,7 @@ public class heatFactory extends MultiCrafter {
                 if (items.has(inputStack)) isheated = true;
             }
             if (isheated && heat < heatCapacity) heat += edelta();
+            craftTime = heat * craftTimescl;
         }
 
 
